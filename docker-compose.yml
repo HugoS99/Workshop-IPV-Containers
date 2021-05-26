@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  spa:
+    build: ./Spa
+    ports: 
+      - "80:80"
+  dotnet_api:
+    build: ./WebApi
+    ports:
+      - "60671:80"
