@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:60671/api/"
-
-
+const baseUrl = process.env.REACT_APP_BACKEND_API;
 
 export default {
 
