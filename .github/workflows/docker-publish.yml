@@ -46,3 +46,10 @@ jobs:
           context: ./Spa/
           push: true
           tags:  ${{ secrets.DOCKERHUB_USERNAME }}/workshopipvspa:latest
+          
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: ./WebApi/
+          push: true
+          tags:  ${{ secrets.DOCKERHUB_USERNAME }}/workshopipvwebapp:latest
