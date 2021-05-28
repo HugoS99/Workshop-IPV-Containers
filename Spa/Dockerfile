@@ -4,7 +4,11 @@ COPY . /usr/local/app
 
 WORKDIR /usr/local/app
 
-RUN yarn install && yarn build
+RUN yarn install
+
+ENV REACT_APP_BACKEND_API=http://localhost:60671
+
+RUN yarn build
 
 FROM nginx:latest
 

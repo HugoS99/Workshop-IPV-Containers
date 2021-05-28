@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const baseUrl = process.env.REACT_APP_BACKEND_API;
-
 export default {
 
-    dCandidate(url = baseUrl + 'dcandidate/') {
+    dCandidate() {
+        // var url = "https://ipv-workshop-2021-dotnet-api.azurewebsites.net/api/dcandidate";
+        var url = process.env.REACT_APP_BACKEND_API + "/api/dcandidate/"
         return {
             fetchAll: () => axios.get(url),
             fetchById: id => axios.get(url + id),
